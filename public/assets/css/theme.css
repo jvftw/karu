@@ -22932,3 +22932,25 @@ iframe {
 		background-position: 0% 50%;
 	}
 }
+
+boxx {
+	--angle: 0deg;
+	width: 50vmin;
+	height: 50vmin;
+	border: 10vmin solid;
+	border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+	
+	animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
