@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Define the "Roboto" font */
+        body {
+            font-family: "Roboto", sans-serif;
+            background: url('assets/img/fotos/facesorveteskaru.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: white; /* Title text color set to white */
+            padding: 20px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow */
+
+        }
+        /* Styling for the product slider container */
+        .product-slider {
+            width: 900px; /* 300px per product * 3 products */
+            overflow: hidden;
+            position: relative;
+            margin: 0 auto; /* Center the product slider */
+            display: flex; /* Center-align the product slides */
+        }
+
+        /* Styling for the product slide items */
+        .product-slide {
+            width: 300px;
+            margin-right: 10px; /* Add space between product cards */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border: 1px solid #ccc;
+            background-color: white; /* White background for product cards */
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px; /* Round borders */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        /* Remove the margin from the last product card to avoid extra spacing */
+        .product-slide:last-child {
+            margin-right: 0;
+        }
+
+        /* Styling for navigation circles */
+        .slider-nav {
+            display: flex;
+            justify-content: center; /* Center the navigation arrows below the product cards */
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .nav-circle {
+            width: 40px;
+            height: 40px;
+            background-color: white;
+            border-radius: 50%; /* Create white circles */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 0 5px; /* Add space between circles */
+        }
+
+        .prev, .next {
+            color: #333; /* Color of the arrows */
+            font-size: 24px; /* Adjust the arrow size */
+        }
+
+        /* Styling for the navigation arrows on hover */
+        .nav-circle:hover {
+            background-color: #eee;
+        }
+
+        /* Styling for product images */
+        .product-image {
+            max-width: 100%; /* Resize the images to fit their containers */
+            max-height: 150px; /* Adjust the maximum height as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Picolés</h1> <!-- Title above the products -->
+
+    <div class="product-slider">
+        <div class="product-slide">
+            <img class="product-image" src="assets/img/fotos/buriti.png" alt="Picolés da Terra">
+            <h2>Picolés da Terra</h2>
+            <p>Buriti, Goiaba & Limão</p>
+        </div>
+        <div class="product-slide">
+            <img class="product-image" src="assets/img/fotos/buriti.png" alt="Picolés ao Leite">
+            <h2>Picolés ao Leite</h2>
+            <p>Coco, Cream & Tentação</p>
+        </div>
+        <div class="product-slide">
+            <img class="product-image" src="assets/img/fotos/buriti.png" alt="Picolés K-Max">
+            <h2>Picolés K-Max</h2>
+            <p>Classic, Chokotine & Cookies</p>
+        </div>
+        <div class="product-slide">
+            <img class="product-image" src="assets/img/fotos/buriti.png" alt="Picolés K-Max">
+            <h2>Picolés Brigadeiro / Truffa</h2>
+            <p>Classic, Chokotine & Cookies</p>
+        </div>
+        <div class="product-slide">
+            <img class="product-image" src="assets/img/fotos/buriti.png" alt="Picolés K-Max">
+            <h2>Picolés Especiais</h2>
+            <p>Classic, Chokotine & Cookies</p>
+        </div>
+        <!-- Add more product slides here -->
+    </div>
+
+    <div class="slider-nav">
+        <div class="nav-circle prev" onclick="moveSlider(-1)">&#9664;</div>
+        <div class="nav-circle next" onclick="moveSlider(1)">&#9654;</div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlides(n) {
+            const slides = document.getElementsByClassName("product-slide");
+            const numSlides = slides.length;
+
+            for (let i = 0; i < numSlides; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (let i = slideIndex; i < slideIndex + 3; i++) {
+                if (i >= 0 && i < numSlides) {
+                    slides[i].style.display = "flex";
+                }
+            }
+        }
+
+        function moveSlider(n) {
+            const slides = document.getElementsByClassName("product-slide");
+            const numSlides = slides.length;
+
+            slideIndex += n * 3;
+
+            if (slideIndex < 0) {
+                slideIndex = 0;
+            }
+
+            if (slideIndex >= numSlides) {
+                slideIndex = numSlides - 3;
+            }
+
+            showSlides(slideIndex);
+        }
+
+        // Initial display of the first three slides
+        showSlides(slideIndex);
+    </script>
+</body>
+</html>

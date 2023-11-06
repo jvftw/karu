@@ -1,0 +1,62 @@
+ * {
+     margin: 0;
+     padding: 0;
+ }
+
+ body {
+     display: flex;
+     justify-content: center;
+     height: 100vh;
+     align-items: center;
+     font-family: 'Poppins', sans-serif;
+ }
+
+ .slider {
+     width: 1230px;
+     overflow: hidden;
+     display: flex;
+     padding: 30px 10px;
+     position: relative;
+ }
+
+ .slider .product {
+     width: 400px;
+     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+     margin-right: 18px;
+     transition: 0.5s;
+
+ }
+
+ .slider .product img {
+     width: 400px;
+     height: 400px;
+     object-fit: cover;
+     border-radius: 10px 10px 0 0;
+ }
+
+ .slider .product .information {
+     padding: 20px 30px;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .slider .arrow {
+     width: 1240px;
+     position: absolute;
+     justify-content: space-between;
+     display: flex;
+     top: 40%;
+ }
+
+ .slider .arrow button {
+
+     font-size: 20px;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     border: 1px solid gray;
+     background-color: white;
+     margin: 0 20px;
+
+ }
