@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Slider</title>
+    <title>Produtos</title>
+    <link rel="icon" type="svg" href="assets/img/fotos/icon.svg">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,6 +16,10 @@
     <script src="slider.js"></script>
 </head>
 <body>
+  <a href="#" onclick="goBack()">
+     <img src="logo.png" width="150" alt="Logo" class="logo-img">
+
+</a>
 
 <h1 class="text-center">Sorvetes de Pote</h1>
 
@@ -166,6 +173,12 @@
     </div>
   </div>
 </div>
+<script>
+  // JavaScript function to go back to the previous page
+  function goBack() {
+      window.history.back();
+  }
+</script>
 
 </body>
 </html>
