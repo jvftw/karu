@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,11 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="revenda.css" rel="stylesheet" />
     <title>Revenda | Sorvetes Karu</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .btn {
+            white-space: normal;
+        }
+
+        /* Media query for smaller screens (e.g., phones) */
+        @media screen and (max-width: 600px) {
+            .btn {
+                width: 80%; /* Adjust button width as needed */
+                margin: 10px 0; /* Add some margin for better spacing */
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <img src="assets/img/revenda.png" alt="revenda">
-    <div class="container text-center">
+    <div class="container">
+        <img src="assets/img/revenda.png" alt="revenda">
+    </div>
+
+    <div class="container">
         <div>
             <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow common-btn"
                 href="https://api.whatsapp.com/send?phone=9284153039"
@@ -17,17 +53,13 @@
         </div>
     </div>
     <br>
-    <div class="container text-center">
+    <div class="container">
         <div>
             <a class="btn btn-primary btn-lg me-md-4 mb-3 mb-md-0 border-0 primary-btn-shadow common-btn"
                 href="https://api.whatsapp.com/send?phone=95991413497"
                 role="button">Torne-se um <b>Revendedor</b> (Roraima)</a>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
 </body>
 
 </html>
