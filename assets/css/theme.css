@@ -149,6 +149,7 @@ h6,
 }
 
 p {
+  color: #FFF7F5;
   margin-top: 0;
   margin-bottom: 1rem;
 }
@@ -3930,14 +3931,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #FFFEFE;
-  background-color: #F1A501;
-  border-color: #F1A501;
+  background-color: #38b8d8;
+  border-color: #096885;
 }
 
 .btn-primary:hover {
   color: #FFFEFE;
-  background-color: #cd8c01;
-  border-color: #c18401;
+  background-color: #096885;
+  border-color: #096885;
 }
 
 .btn-check:focus+.btn-primary,
